@@ -1,7 +1,7 @@
-Java Spring Boot Rest Api Demo
+Java MyBatis H2 Demo
 ==============================
 
-如何使用SpringBoot来定义RestApi
+如何使用MyBatis向h2中添加数据
 
 ```
 brew install httpie
@@ -18,4 +18,18 @@ http POST http://localhost:8080/api/messages text=aa##bb
 http GET http://localhost:8080/api/messages
 
 http GET http://localhost:8080/api/messages/0
+```
+
+Then
+
+```
+http://localhost:8080/h2
+```
+
+with
+
+```
+JDBC_URL: jdbc:h2:mem:demo
+USER NAME: sa
+PASSWORD: sa
 ```

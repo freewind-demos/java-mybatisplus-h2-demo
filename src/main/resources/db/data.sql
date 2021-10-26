@@ -1,0 +1,1 @@
+insert into `messages`(text) values ('aaa');
