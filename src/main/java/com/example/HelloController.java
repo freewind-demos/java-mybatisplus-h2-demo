@@ -26,7 +26,7 @@ public class HelloController {
     }
 
     @PostMapping("")
-    public Integer save(@RequestBody @Validated Message message) {
+    public Long save(@RequestBody @Validated Message message) {
         this.messageService.create(message);
         return message.id;
     }

@@ -1,7 +1,7 @@
-Java MyBatis H2 Demo
+Java MyBatisPlus H2 Demo
 ==============================
 
-如何使用MyBatis向h2中添加数据
+MyBatisPlus可以简化CRUD，自动提供一些相应方法，不用每个都手写SQL
 
 ```
 brew install httpie
@@ -10,20 +10,20 @@ java -jar target/demo-0.0.1-SNAPSHOT.jar
 ```
 
 ```
-http POST http://localhost:8080/api/messages text=aaa
-http POST http://localhost:8080/api/messages text=bbb
+http POST http://localhost:8099/api/messages text=aaa
+http POST http://localhost:8099/api/messages text=bbb
 
-http POST http://localhost:8080/api/messages text=aa##bb
+http POST http://localhost:8099/api/messages text=aa##bb
 
-http GET http://localhost:8080/api/messages
+http GET http://localhost:8099/api/messages
 
-http GET http://localhost:8080/api/messages/0
+http GET http://localhost:8099/api/messages/0
 ```
 
 Then
 
 ```
-http://localhost:8080/h2
+http://localhost:8099/h2
 ```
 
 with

@@ -15,16 +15,16 @@ public class DefaultMessageService implements MessageService {
 
     @Override
     public List<Message> findAll() {
-        return this.messageMapper.findAll();
+        return this.messageMapper.selectList(null);
     }
 
     @Override
     public Message findById(String id) {
-        return this.messageMapper.findById(id);
+        return this.messageMapper.selectById(id);
     }
 
     @Override
     public void create(Message message) {
-        this.messageMapper.create(message);
+        this.messageMapper.insert(message);
     }
 }
